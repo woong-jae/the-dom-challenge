@@ -1,0 +1,19 @@
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0px;
+  width: max-content;
+}
+.chess-col {
+  width: 50px;
+  height: 50px;
+  border: solid 1px;
+}
+.chess-col-odd {
+  background-color: black;
+}
+
+.highlight {
+  background-color: red;
+}
