@@ -43,11 +43,12 @@ class ProgressBar {
       } else {
         if (--this.#count === 0) clearInterval(running);
         width = 0;
-        event.target.textContent = `Run ${this.#count}`;
+        event.target.textContent =
+          this.#count < 1 ? 'Run' : `Run ${this.#count}`;
         progress.style.width = `${width}%`;
       }
     }, 100);
   };
 }
 
-new ProgressBar('#progress-bar', 3000);
+new ProgressBar('#progress-bar', 1000);
